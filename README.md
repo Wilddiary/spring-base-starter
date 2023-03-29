@@ -51,3 +51,13 @@ Imports Spring boot and cloud dependencies. Does not include spring-boot-maven-p
 
 Includes GPG build plugin for signing the build artifacts. If you desire the artifacts should be signed then you need to configure GPG on your environment. Else, you can skip the signing process by setting the `gpg.skip` property to true either in your pom.xml or by passing it as a system property to maven.
 
+#Usage
+
+Just use it as a parent pom by inheriting it in your project pom. Inherited projects will have the standard build experience with all quality gates defined by this project along with minimal Spring and Spring Cloud dependencies required for any Spring application. 
+
+  <parent>
+    <groupId>com.wilddiary</groupId>
+    <artifactId>spring-base-starter</artifactId>
+    <version>{version}</version>
+    <relativePath />
+  </parent>
