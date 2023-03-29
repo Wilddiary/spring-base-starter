@@ -1,6 +1,6 @@
-<h1 style="text-align:center;font-weight: bold; margin-top: 20px; margin-bottom: 20px;">spring-base-starter </h1>
+<h1 align="center" style="font-weight: bold; margin-top: 20px; margin-bottom: 20px;">spring-base-starter </h1>
 
-<p style="text-align:center;">
+<p align="center">
 
   <img alt="Github Build" src="https://img.shields.io/github/actions/workflow/status/Wilddiary/spring-base-starter/maven-release.yml" />
   <img alt="Synk Vulnerabilities" src="https://img.shields.io/snyk/vulnerabilities/github/Wilddiary/spring-base-starter" />
@@ -51,13 +51,14 @@ Imports Spring boot and cloud dependencies. Does not include spring-boot-maven-p
 
 Includes GPG build plugin for signing the build artifacts. If you desire the artifacts should be signed then you need to configure GPG on your environment. Else, you can skip the signing process by setting the `gpg.skip` property to true either in your pom.xml or by passing it as a system property to maven.
 
-#Usage
+# Usage
 
 Just use it as a parent pom by inheriting it in your project pom. Inherited projects will have the standard build experience with all quality gates defined by this project along with minimal Spring and Spring Cloud dependencies required for any Spring application. 
-
+```
   <parent>
     <groupId>com.wilddiary</groupId>
     <artifactId>spring-base-starter</artifactId>
     <version>{version}</version>
     <relativePath />
   </parent>
+```
