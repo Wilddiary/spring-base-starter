@@ -73,10 +73,10 @@ the License.
     </snapshotRepository>
   </distributionManagement>
   <properties>
-    <spring-boot-starter-parent.version>3.0.6</spring-boot-starter-parent.version>
-    <spring-cloud.version>2022.0.2</spring-cloud.version>
-    <snakeyaml.version>2.0</snakeyaml.version>
-    <micrometer-tracing.version>1.0.4</micrometer-tracing.version>
+    <spring-boot-starter-parent.version>3.1.5</spring-boot-starter-parent.version>
+    <spring-cloud.version>2022.0.4</spring-cloud.version>
+    <snakeyaml.version>2.2</snakeyaml.version>
+    <micrometer-tracing.version>1.2.0</micrometer-tracing.version>
   </properties>
   <dependencyManagement>
     <dependencies>
