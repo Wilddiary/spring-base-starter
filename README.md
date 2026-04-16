@@ -28,6 +28,9 @@
 
 A minimal service chassis for Spring micro-services. Includes a standard build experience and dependencies for distributed tracing and metrics collection. Allows faster bootstrapping of services.
 
+> **Compatibility Matrix** — JDK, Spring Boot, Spring Cloud, and version compatibility details:
+> [https://github.com/Wilddiary/spring-base-starter/wiki/Compatibility-Matrix](https://github.com/Wilddiary/spring-base-starter/wiki/Compatibility-Matrix)
+
 Imports Spring boot and cloud dependencies. Does not include spring-boot-maven-plugin build plugin out of the box to allow use in Spring library applications too. Child projects that require an executable jar to be built, would need to include it as below.
 
 ```
