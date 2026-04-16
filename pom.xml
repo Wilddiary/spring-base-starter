@@ -27,7 +27,7 @@ the License.
     <!-- lookup parent from repository -->
   </parent>
   <artifactId>spring-base-starter</artifactId>
-  <version>1.1.5</version>
+  <version>1.1.6-SNAPSHOT</version>
   <packaging>pom</packaging>
   <name>Basic Spring starter parent</name>
   <description>Inheritable starter for Spring based applications</description>
@@ -55,7 +55,7 @@ the License.
   <scm>
     <connection>scm:git:git://github.com/Wilddiary/spring-base-starter.git</connection>
     <developerConnection>scm:git:git@github.com:Wilddiary/spring-base-starter.git</developerConnection>
-    <tag>1.1.5</tag>
+    <tag>HEAD</tag>
     <url>https://github.com/Wilddiary/spring-base-starter/tree/main</url>
   </scm>
   <issueManagement>
