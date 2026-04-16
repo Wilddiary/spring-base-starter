@@ -16,12 +16,10 @@ on:
 jobs:
   call-workflow-release:
     uses: Wilddiary/workflows/.github/workflows/maven-release.yml@main
-    with:
-      ARTIFACTORY_SERVER_ID: ${{ vars.ARTIFACTORY_SERVER_ID }}
     secrets:
       GPG_PRIVATE_KEY: ${{ secrets.GPG_PRIVATE_KEY }}
       GPG_PASS_PHRASE: ${{ secrets.GPG_PASS_PHRASE }}
       DEPLOY_PRIVATE_KEY: ${{ secrets.DEPLOY_PRIVATE_KEY }}
-      ARTIFACTORY_USERNAME: ${{ secrets.ARTIFACTORY_USERNAME }}
-      ARTIFACTORY_PASSWORD: ${{ secrets.ARTIFACTORY_PASSWORD }}
+      CENTRAL_USERNAME: ${{ secrets.CENTRAL_USERNAME }}
+      CENTRAL_TOKEN: ${{ secrets.CENTRAL_TOKEN }}
       NVD_API_KEY: ${{ secrets.NVD_API_KEY }}

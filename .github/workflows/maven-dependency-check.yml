@@ -1,0 +1,14 @@
+# Weekly OWASP + NVD scan (full download only when cache misses or data is stale).
+
+name: Dependency check
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 6 * * 1'
+
+jobs:
+  call-workflow-dependency-check:
+    uses: Wilddiary/workflows/.github/workflows/maven-dependency-check.yml@main
+    secrets:
+      NVD_API_KEY: ${{ secrets.NVD_API_KEY }}

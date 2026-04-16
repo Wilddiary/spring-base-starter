@@ -5,6 +5,9 @@
 # They are provided by a third-party and are governed by
 # separate terms of service, privacy policy, and support
 # documentation.
+#
+# The reusable Wilddiary/workflows build runs mvn with -Ddependency-check.skip=true
+# (no NVD download on PR/push). Full OWASP+NVD runs in maven-dependency-check.yml with NVD_API_KEY.
 
 name: Build
 
@@ -19,5 +22,3 @@ on:
 jobs:
   call-workflow-build:
     uses: Wilddiary/workflows/.github/workflows/maven-build.yml@main
-    secrets:
-      NVD_API_KEY: ${{ secrets.NVD_API_KEY }}

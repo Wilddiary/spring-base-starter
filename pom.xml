@@ -22,7 +22,7 @@ the License.
   <parent>
     <groupId>com.wilddiary</groupId>
     <artifactId>maven-base-starter</artifactId>
-    <version>1.1.3</version>
+    <version>1.1.4</version>
     <relativePath />
     <!-- lookup parent from repository -->
   </parent>
@@ -54,30 +54,19 @@ the License.
   </developers>
   <scm>
     <connection>scm:git:git://github.com/Wilddiary/spring-base-starter.git</connection>
-    <developerConnection>scm:git:ssh://github.com/Wilddiary/spring-base-starter.git</developerConnection>
+    <developerConnection>scm:git:git@github.com:Wilddiary/spring-base-starter.git</developerConnection>
     <tag>HEAD</tag>
-    <url>git://github.com/Wilddiary/spring-base-starter.git</url>
+    <url>https://github.com/Wilddiary/spring-base-starter/tree/main</url>
   </scm>
   <issueManagement>
     <system>Github</system>
     <url>https://github.com/Wilddiary/spring-base-starter/issues</url>
   </issueManagement>
-  <!-- Distribution details applicable to this project -->
-  <distributionManagement>
-    <repository>
-      <id>sonatype-nexus-repo</id>
-      <url>https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/</url>
-    </repository>
-    <snapshotRepository>
-      <id>sonatype-nexus-repo</id>
-      <url>https://s01.oss.sonatype.org/content/repositories/snapshots</url>
-    </snapshotRepository>
-  </distributionManagement>
+  <!-- Distribution handled by central-publishing-maven-plugin; no distributionManagement needed -->
   <properties>
-    <spring-boot-starter-parent.version>3.3.3</spring-boot-starter-parent.version>
-    <spring-cloud.version>2023.0.3</spring-cloud.version>
-    <snakeyaml.version>2.3</snakeyaml.version>
-    <micrometer-tracing.version>1.3.3</micrometer-tracing.version>
+    <spring-boot-starter-parent.version>3.5.13</spring-boot-starter-parent.version>
+    <!-- Spring Cloud 2025.0.2 (Northfields) is aligned with Spring Boot 3.5.13 -->
+    <spring-cloud.version>2025.0.2</spring-cloud.version>
   </properties>
   <dependencyManagement>
     <dependencies>
@@ -94,18 +83,6 @@ the License.
         <version>${spring-cloud.version}</version>
         <type>pom</type>
         <scope>import</scope>
-      </dependency>
-      <dependency>
-        <groupId>io.micrometer</groupId>
-        <artifactId>micrometer-tracing-bom</artifactId>
-        <version>${micrometer-tracing.version}</version>
-        <type>pom</type>
-        <scope>import</scope>
-      </dependency>
-      <dependency>
-        <groupId>org.yaml</groupId>
-        <artifactId>snakeyaml</artifactId>
-        <version>${snakeyaml.version}</version>
       </dependency>
     </dependencies>
   </dependencyManagement>
